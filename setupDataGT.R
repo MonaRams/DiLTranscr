@@ -3,7 +3,7 @@ library(readr)
 setwd("~/work/GIT/RScripts") # has to be removed
 setwd("..") #from [GIT]/Rscripts to main git directory
 mainDr <- getwd()
-source(paste0(mainDr, "/RScripts/outlRemoveGIT.R")) # has to be changed
+source(paste0(mainDr, "/RScripts/outlRemoveGT.R")) # has to be changed
 #############################################################################
 geoIDs <- c("GSE120795", "GSE112004")
 dataDr = paste0(mainDr, "/Data")
@@ -18,10 +18,10 @@ for(geoID in geoIDs){
   gc()
   
   setwd(dataDr)
-  if("GSE120795DatRAW.txt" %in% list.files()){
-    dat <- read_delim("GSE120795DatRAW.txt", delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+  if(paste0(geoID, "DatRAW.txt") %in% list.files()){
+    dat <- read_delim(paste0(geoID, "DatRAW.txt"), delim = "\t", escape_double = FALSE, trim_ws = TRUE)
     dat <- as.data.frame(dat)
-    smplInfo <- read_delim("GSE120795SampleInfoRAW.txt", delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+    smplInfo <- read_delim(paste0(geoID, "SampleInfoRAW.txt"), delim = "\t", escape_double = FALSE, trim_ws = TRUE)
     smplInfo <- as.data.frame(smplInfo)
   }else{
     cat("The specified file is not in the Data directory")
