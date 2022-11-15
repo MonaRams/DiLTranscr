@@ -2,7 +2,7 @@
 Dictionary learning for transcriptomic data
 
 ## Overview
-The the data download, data preparation, and method run are implemenated in 5 scripts (4 R scripts, 1 python script), If you want to run the method for datasets *GSE120795* and *GSE112004*, you can just run one script after another in the following order: RScripts./geoDownloadGT.R, RScripts./geoDownloadGT.R, RScripts./setupDataGT.R, PythonScripts./normaliseGT.py. 
+The the data download, data preparation, and method run are implemenated in 5 scripts (4 R scripts, 1 python script), If you want to run the method for datasets *GSE120795* and *GSE112004*, you can just run one script after another in the following order: RScripts./geoDownloadGT.R, RScripts./geoDownloadGT.R, RScripts./setupDataGT.R, PythonScripts./normaliseGT.py. You can then jump to [DLT run, evaluation & method comparison/Script outputs](https://github.com/MonaRams/DiLTranscr#script-output).
 
 Below, details on the scripts are given. It is also indicated, what needs to be adjusted in order to run the scripts for different datasets. Further, the script outputs are explained.
 
